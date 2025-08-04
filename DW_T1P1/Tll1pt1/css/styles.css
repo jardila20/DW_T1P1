@@ -1,0 +1,356 @@
+/* ESTILOS GENERALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding-top: 80px; /* navbar fija */
+}
+
+/* Titulos de color celestre */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    text-decoration: underline;
+    text-decoration-color: lightblue;
+    text-decoration-thickness: 2px;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* barra de navegación quieta */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* me inspiré en algunos colores de la bandera de Santander: amarillo y rojo */
+    background: linear-gradient(135deg, #FFD700 0%, #DC143C 100%);
+    padding: 1rem 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    margin: 0;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: block;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Hover para la navbar */
+.navbar nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* PÁGINA BIENVENIDA */
+.welcome-section {
+    background: linear-gradient(to right, #fff8dc, #f0f8ff);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.floating-image {
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+    border: 2px solid black; /* Solo las imágenes de bienvenida tienen borde */
+    border-radius: 8px;
+}
+
+.welcome-text {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* PÁGINA BIOGRAFÍA */
+.biography-section {
+    background: linear-gradient(to right, #fff8dc, #ffe4e1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ESTILOS DE TABLAS */
+.bio-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bio-table th {
+    background-color: #191970; /* Azul oscuro */
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: left;
+}
+
+.bio-table td {
+    padding: 0.8rem 1rem;
+    border: 1px solid #333;
+}
+
+.bio-table tr:nth-child(even) td {
+    background-color: white;
+    color: black;
+}
+
+.bio-table tr:nth-child(odd) td {
+    background-color: #90EE90; /* Verde claro */
+    color: black;
+}
+
+/* HOJA DE VIDA */
+.cv-index {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cv-index h2 {
+    color: #8B0000;
+    margin-bottom: 1rem;
+}
+
+.cv-index ul {
+    list-style: none;
+}
+
+.cv-index ul li {
+    margin: 0.5rem 0;
+}
+
+.cv-index ul li a {
+    color: #8B0000;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cv-index ul li a:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+/* SECCIONES DE CV */
+.cv-section {
+    border: 2px solid #8B0000;
+    background: linear-gradient(to right, #FFE4B5, #F0E68C);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cv-subsection {
+    margin-bottom: 2rem;
+}
+
+/* LISTAS EN CV */
+/* Listas no numeradas - viñetas de color distinto */
+.cv-section ul li {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+}
+
+.cv-section ul li::marker {
+    color: #DC143C; /* Rojo para las viñetas */
+    font-size: 1.2em;
+}
+
+/* Listas numeradas con el número de color distinto */
+.cv-section ol li {
+    margin: 0.5rem 0;
+    padding-left: 0.5rem;
+}
+
+.cv-section ol li::marker {
+    color: #8B0000; /* Rojo oscuro pa los números */
+    font-weight: bold;
+}
+
+/* PÁGINA MATERIAL DE INTERÉS */
+.video-section, .links-section, .gallery-section, .hobbies-section {
+    background: linear-gradient(to right, #FFF8DC, #F5F5DC);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* VIDEOOOO */
+.video-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.video-description {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #555;
+    text-align: justify;
+}
+
+/* ENLACES */
+.links-container h3 {
+    color: #8B0000;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.links-list {
+    list-style: none;
+}
+
+.links-list li {
+    margin: 0.5rem 0;
+}
+
+.links-list a {
+    color: #DC143C;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.links-list a:hover {
+    background-color: #FFD700;
+    color: #8B0000;
+    transform: translateX(5px);
+}
+
+/* GALERÍA */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.image-gallery figure { /* Cuadro visajoso de la galería */
+    text-align: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery figure:hover { /*pa que hoveree la imagem*/
+    transform: translateY(-5px);
+}
+
+.image-gallery img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+.image-gallery figcaption {
+    margin-top: 0.5rem;
+    font-weight: 500;
+    color: #8B0000;
+}
+
+/* HOBBIES */
+.hobby-item {
+    background: white;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border-left: 5px solid #DC143C;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hobby-item h3 {
+    color: #8B0000;
+    margin-bottom: 1rem;
+}
+
+.hobby-item p {
+    text-align: justify;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(135deg, #8B0000, #DC143C);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
